@@ -25,7 +25,7 @@ const RegistroModal = (props) => {
                 <div className="modal-content bg-dark">
                     <div className="modal-header">
                         <h1 className="modal-title fs-5" >
-                            Edit Task
+                            Create Task
                         </h1>
                         <button type="button" 
                             className="btn-close btn-close-white"
@@ -55,7 +55,7 @@ const RegistroModal = (props) => {
                             } }>
                             Close
                         </button>
-                        <button type="button" className="btn btn-primary" onClick={() => {props.onCreate(name, description)}}>Edit</button>
+                        <button type="button" className="btn btn-primary" onClick={() => {props.onCreate(name, description)}}>Create</button>
                     </div>
                 </div>
             </div>

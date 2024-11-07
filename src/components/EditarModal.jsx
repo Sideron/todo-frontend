@@ -2,8 +2,8 @@ import { useState } from "react"
 
 const EditarModal = (props) => {
 
-    const [name, setName] = useState("")
-    const [description, setDescription] = useState("")
+    const [name, setName] = useState(props.nombreEdit)
+    const [description, setDescription] = useState(props.descEdit)
 
     const cambiarNombre = (evt) => {
         setName(evt.target.value)
@@ -25,7 +25,7 @@ const EditarModal = (props) => {
                 <div className="modal-content bg-dark">
                     <div className="modal-header">
                         <h1 className="modal-title fs-5" >
-                            Create Task
+                            Edit Task
                         </h1>
                         <button type="button" 
                             className="btn-close btn-close-white"
@@ -55,7 +55,7 @@ const EditarModal = (props) => {
                             } }>
                             Close
                         </button>
-                        <button type="button" className="btn btn-primary" onClick={() => {props.onCreate(name, description)}}>Create</button>
+                        <button type="button" className="btn btn-primary" onClick={() => {props.onCreate(name, description)}}>Edit</button>
                     </div>
                 </div>
             </div>
